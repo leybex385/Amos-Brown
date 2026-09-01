@@ -58,35 +58,35 @@ document.addEventListener('DOMContentLoaded', () => {
         const modalContentMap = {
             'market-data': {
                 title: 'Market Data',
-                content: '<p>Our Market Data infrastructure is fundamental to our quantitative processes. We aggregate, sanitize, and normalize tick-level data from over 50 global exchanges, covering equities, derivatives, fixed income, and FX.</p><p>Ensuring data integrity allows our models to operate with precision, free from the statistical noise that typically degrades predictive validity.</p>'
+                content: '<p>Our team continuously evaluates multiple dimensions of market information, focusing heavily on real-time price movements.</p><p>Rather than focusing only on whether prices are moving higher or lower, our objective is to actively understand the underlying market dynamics and the fundamental factors influencing these price movements.</p>'
             },
             'market-structure': {
                 title: 'Market Structure',
-                content: '<p>We analyze the underlying mechanics of trading venues around the world. Understanding order routing, liquidity fragmentation, and exchange protocols allows us to build execution algorithms that minimize latency and slippage.</p><p>By deconstructing market microstructure, we secure a critical edge in both capacity and transaction costs.</p>'
+                content: '<p>A critical component of our continuous evaluation of market information is the analysis of historical market structures.</p><p>By studying structural market data, we aim to systematically understand the broader underlying dynamics that influence global price movements and market conditions.</p>'
             },
-            'quantitative-analysis': {
-                title: 'Quantitative Analysis',
-                content: '<p>Our core analytical engine employs advanced statistical modeling, machine learning frameworks, and econometric techniques to isolate non-random price anomalies across disconnected asset classes.</p><p>We rely exclusively on empirical testing rather than heuristic assumptions, building strategies built on rigid mathematical foundations.</p>'
+            'liquidity-trading-volume': {
+                title: 'Liquidity & Trading Volume',
+                content: '<p>As part of our data collection and research system, we continuously evaluate trading volume and liquidity changes.</p><p>This allows us to move beyond simple directional price tracking and focus on understanding the underlying market dynamics that truly influence structural price movements.</p>'
             },
             'volatility': {
                 title: 'Volatility',
-                content: '<p>Volatility is treated not just as a risk parameter but as a tradable asset class. We model implied volatility surfaces and variance premiums to identify periods of structural mispricing in derivative markets.</p><p>Our models forecast regime shifts, enabling portfolios to dynamically adjust their exposure to systemic distress.</p>'
+                content: '<p>Our research framework systematically tracks market volatility conditions alongside deeper volatility evaluation parameters.</p><p>This allows us to systematically evaluate market conditions and construct a more objective, structured, and disciplined approach to understanding financial markets.</p>'
             },
             'probability': {
                 title: 'Probability',
-                content: '<p>Every decision is grounded in Bayesian probability assessment. We generate vast swaths of synthetic market sequences via Monte Carlo simulations to pressure-test the resilience of our signals under catastrophic outlier scenarios.</p><p>We build our portfolios expecting chaos, ensuring mathematically sound responses to unpredictable events.</p>'
+                content: '<p>After collecting market data, our team applies quantitative research methods to conduct deeper analysis through rigorous probability assessment.</p><p>The purpose of this process is not to predict every future market movement with certainty. Instead, it is designed to evaluate market conditions systematically and identify opportunities with stronger probability characteristics.</p>'
             },
             'macroeconomic-indicators': {
                 title: 'Macroeconomic Indicators',
-                content: '<p>While rooted in quantitative execution, we systematically ingest broad macroeconomic metrics—interest rate dynamics, central bank liquidity flows, and GDP velocity indicators.</p><p>These inputs serve as essential context nodes, modulating the aggression or defensiveness of our high-frequency allocation arrays.</p>'
+                content: '<p>Our continuous evaluation of multiple dimensions of market information includes the systematic tracking of global macroeconomic indicators.</p><p>By integrating these indicators with our data processing capabilities, we strive to understand the underlying market dynamics influencing price movements.</p>'
             },
             'market-sentiment': {
                 title: 'Market Sentiment',
-                content: '<p>We utilize natural language processing (NLP) to parse millions of unstructured data points daily, including central bank minutes, regulatory filings, and global news feeds.</p><p>By quantifying abstract sentiment into structured datasets, we gain insight into the emotional elasticity and positioning of the broader institutional market.</p>'
+                content: '<p>As a core component of our data evaluation process, our team continuously tracks market sentiment factors.</p><p>Evaluating sentiment alongside traditional metrics helps us achieve our goal of understanding true underlying market dynamics, rather than focusing solely on whether prices are moving higher or lower.</p>'
             },
             'capital-flows': {
                 title: 'Capital Flows',
-                content: '<p>Tracking the migration of liquidity is essential for predicting structural trend exhaustion. We monitor inter-market capital flow rotations, dark pool volumes, and institutional block trades.</p><p>This continuous monitoring allows us to detect stealth accumulation and distribution phases before they reflect in traditional price action.</p>'
+                content: '<p>To properly evaluate multidimensional market information, our research system actively monitors capital flow patterns.</p><p>Incorporating capital flows into our research framework allows us to systematically evaluate market conditions and identify key opportunities within a disciplined risk framework.</p>'
             }
         };
 
@@ -134,9 +134,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Dynamically apply reveal classes to elements if they don't have them
     const revealSelectors = [
         '.section-title', '.main-title', '.hero-text', '.subtitle', '.hero-buttons',
-        '.about-person-title', '.about-person-subtitle', '.about-person-desc',
+        '.about-person-title', '.about-person-subtitle', '.about-person-desc', '.about-subheading',
         '.massive-headline', '.framework-intro', '.central-title', '.central-desc',
-        '.luxury-philosophy-quote blockquote', '.quote-signature',
+        '.luxury-philosophy-quote blockquote', '.quote-signature', '.tech-points-list li',
         '.research-eyebrow', '.research-intro',
         '.subpage-title', '.intro-lead', '.subpage-editorial p', '.subpage-editorial h2'
     ];

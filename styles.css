@@ -465,6 +465,14 @@ ul {
     margin-bottom: var(--spacing-lg);
 }
 
+.about-subheading {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--color-navy);
+}
+
 /* ==========================================================================
    2B. ABOUT DETAILS (Blueprint Background Spread)
    ========================================================================== */
@@ -536,6 +544,30 @@ ul {
     color: var(--color-white);
     font-weight: 300;
     margin-bottom: 25px;
+}
+
+.tech-points-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    text-align: left;
+    display: inline-block;
+}
+
+.tech-points-list li {
+    font-size: 1.15rem;
+    color: var(--color-gold);
+    margin-bottom: 15px;
+    padding-left: 25px;
+    position: relative;
+    letter-spacing: 0.5px;
+}
+
+.tech-points-list li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--color-white);
 }
 
 .central-desc {
