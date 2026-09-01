@@ -130,4 +130,61 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // Dynamically apply reveal classes to elements if they don't have them
+    const revealSelectors = [
+        '.section-title', '.main-title', '.hero-text', '.subtitle', '.hero-buttons',
+        '.about-person-title', '.about-person-subtitle', '.about-person-desc',
+        '.massive-headline', '.framework-intro', '.central-title', '.central-desc',
+        '.luxury-philosophy-quote blockquote', '.quote-signature',
+        '.research-eyebrow', '.research-intro',
+        '.subpage-title', '.intro-lead', '.subpage-editorial p', '.subpage-editorial h2'
+    ];
+
+    document.querySelectorAll(revealSelectors.join(', ')).forEach(el => {
+        if (!el.classList.contains('reveal-up')) {
+            el.classList.add('reveal-up');
+        }
+    });
+
+    // Apply staggered delays to groups
+    const staggerGroups = [
+        '.research-grid-new .research-card-new',
+        '.luxury-central-list .central-item',
+        '.tags-container .research-tag',
+        '.contact-editorial-info .contact-item',
+        '.process-timeline-new .step-item-new',
+        '.risk-flow .flow-item',
+        '.subpage-editorial ul li'
+    ];
+
+    staggerGroups.forEach(groupSelector => {
+        const elements = document.querySelectorAll(groupSelector);
+        elements.forEach((el, index) => {
+            el.classList.add('reveal-up');
+            // Stagger up to 600ms (100ms per index)
+            const delay = Math.min((index + 1) * 100, 600);
+            el.classList.add(`delay-${delay}`);
+        });
+    });
+
+    // Scroll Reveal Intersection Observer
+    const revealElements = document.querySelectorAll('.reveal-up');
+
+    if (revealElements.length > 0) {
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            root: null,
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+    }
 });
