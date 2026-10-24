@@ -87,6 +87,14 @@ document.addEventListener('DOMContentLoaded', () => {
             'capital-flows': {
                 title: 'Capital Flows',
                 content: '<p>To properly evaluate multidimensional market information, our research system actively monitors capital flow patterns.</p><p>Incorporating capital flows into our research framework allows us to systematically evaluate market conditions and identify key opportunities within a disciplined risk framework.</p>'
+            },
+            'privacy': {
+                title: 'Privacy Policy',
+                content: '<p>The Amos Brown Quantitative Research Team is committed to maintaining strict confidentiality, intellectual privacy, and robust data protection standards for all institutional partners, market clients, and visitors.</p><p>Any inquiry information transmitted through this portal is held in institutional confidence and is never sold, shared, or distributed to non-affiliated external parties.</p>'
+            },
+            'terms': {
+                title: 'Terms of Service',
+                content: '<p>All quantitative modeling architectures, statistical formulas, research methodologies, and documentation presented on this platform are proprietary intellectual property of the Amos Brown Quantitative Research Team.</p><p>This material is provided strictly for informational and research purposes and does not constitute a direct solicitation, financial consultation, or an offer to buy or sell securities.</p>'
             }
         };
 
@@ -105,9 +113,10 @@ document.addEventListener('DOMContentLoaded', () => {
             document.body.classList.remove('no-scroll');
         };
 
-        // Click on tag
-        researchTags.forEach(tag => {
-            tag.addEventListener('click', () => {
+        // Click on tag or modal trigger
+        document.querySelectorAll('[data-topic]').forEach(tag => {
+            tag.addEventListener('click', (e) => {
+                e.preventDefault();
                 const topic = tag.getAttribute('data-topic');
                 openModal(topic);
             });
